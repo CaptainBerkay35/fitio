@@ -1,5 +1,4 @@
 import React from "react";
-import fitnessImage from "../img/bannerImg.png"; // Resmi import edin
 import Button from "./Button.tsx";
 
 export default function Banner() {
@@ -20,7 +19,7 @@ export default function Banner() {
       {/* Sağ Taraf: Resim Alanı */}
       <div className="flex-1 ">
         <img
-          src={fitnessImage}
+          src="bannerImg.png"
           alt="Fitness Banner"
           className="w-full max-w-md mx-auto md:mx-0 rounded-lg "
         />
