@@ -1,16 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header.tsx';
-import Deneme from './components/deneme.tsx';
-
-
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/Homepage.tsx";
 
 export default function App() {
   return (
     <Router>
-    <Header />
-    <Deneme />
-   
-  </Router>
-  )
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
 }
