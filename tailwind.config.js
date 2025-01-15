@@ -12,6 +12,7 @@ module.exports = {
         accentText: '#FFFFFF',
         error: '#F44336',
         success: '#4CAF50',
+        bannerBg:"#F5F5F5",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],

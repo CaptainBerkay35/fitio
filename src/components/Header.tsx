@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi"; // Menü ikonları için
+import Button from "./Button.tsx";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,7 +35,10 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-primary text-2xl font-bold font-montserrat">
+        <Link
+          to="/"
+          className="text-primary text-2xl font-bold font-montserrat"
+        >
           Fit<span className="text-secondary">io</span>
         </Link>
 
@@ -56,18 +60,17 @@ export default function Header() {
 
         {/* Buton */}
         <div className="hidden md:block">
-          <Link
+          <Button
+            text="Giriş Yap"
             to="/login"
-            className="bg-primary text-accentText px-4 py-2 rounded-md hover:bg-secondary"
-          >
-            Giriş Yap
-          </Link>
+            className="bg-primary text-primary"
+          />
         </div>
 
         {/* Hamburger Menü Butonu */}
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-primary text-3xl">
-             <FiMenu />
+            <FiMenu />
           </button>
         </div>
       </div>
@@ -111,7 +114,7 @@ export default function Header() {
           </Link>
           <Link
             to="/login"
-            className="bg-primary text-accentText px-6 py-2 rounded-md hover:bg-secondary"
+            className=" text-primary text-xl   "
             onClick={toggleMenu}
           >
             Giriş Yap
