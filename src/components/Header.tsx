@@ -37,23 +37,23 @@ export default function Header() {
         {/* Logo */}
         <Link
           to="/"
-          className="text-primary text-2xl font-bold font-montserrat"
+          className="text-primary text-4xl font-bold font-montserrat"
         >
           Fit<span className="text-secondary">io</span>
         </Link>
 
         {/* Masaüstü Menü */}
-        <nav className="hidden md:flex space-x-6 font-roboto text-text text-lg ">
+        <nav className="hidden md:flex space-x-6 font-montserrat text-text text-lg ">
           <Link to="/" className="hover:text-primary">
             Anasayfa
           </Link>
-          <div className="bg-gray-500 w-0.5 min-h-full"></div>
+          <div className="bg-gray-500 w-0.5 min-h-full "></div>
           <Link to="/about" className="hover:text-primary">
             Hakkımızda
           </Link>
-          <div className="bg-gray-500 w-0.5 min-h-full"></div>
+          <div className="bg-gray-500 w-0.5 min-h-full "></div>
 
-          <Link to="/contact" className="hover:text-primary">
+          <Link to="/contact" className="hover:text-primary ">
             İletişim
           </Link>
         </nav>
@@ -63,7 +63,7 @@ export default function Header() {
           <Button
             text="Giriş Yap"
             to="/login"
-            className="bg-primary text-primary"
+            className="bg-primary text-primary font-montserrat"
           />
         </div>
 
