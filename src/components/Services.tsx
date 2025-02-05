@@ -18,7 +18,7 @@ export default function Services() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
-        <h1 className="text-black text-4xl font-montserrat">
+        <h1 className="text-black text-4xl font-montserrat font-semibold">
           Ürün ve Hizmetler
         </h1>
         <div className="flex justify-between gap-12">
