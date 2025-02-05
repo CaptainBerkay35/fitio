@@ -3,6 +3,7 @@ import Layout from "../components/Layout.tsx";
 import Banner from "../components/Banner.tsx";
 import Services from "../components/Services.tsx";
 import Information from "../components/Information.tsx";
+import Calculator from "../components/Calculator.tsx"
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Banner />
       <Information />
       <Services />
+      <Calculator />
     </Layout>
   );
 }

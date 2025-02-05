@@ -3,7 +3,7 @@ import React from "react";
 export default function Information() {
   return (
     <div className="flex flex-col items-center gap-8">
-      <h1 className="font-montserrat text-4xl">
+      <h1 className="font-montserrat text-4xl font-semibold">
         <span className="text-primary">Sporun</span> Faydaları
       </h1>
       <div className="bg-gradient-to-r from-green-600 to-primary rounded-lg font-roboto flex flex-col md:flex-row items-center justify-center px-8 py-12 gap-4">
