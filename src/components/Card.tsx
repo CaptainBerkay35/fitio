@@ -1,28 +1,29 @@
 import React from "react";
-import Button from "./Button.tsx";
+import { Link } from "react-router-dom";
 
 interface CardProps {
   title: string;
-  desc: string;
   img: string;
+  link: string;
 }
 
-export default function Card({ title, desc, img }: CardProps) {
+export default function Card({ title, img, link }: CardProps) {
   return (
-    <div className="flex flex-col min-w-full h-full ">
-      {/* Görselin genişliğini eşitlemek için w-full kullanıyoruz */}
-      <div className="relative h-80 ">
-        <img
-          src={img}
-          alt={title}
-          className="object-cover w-full h-full rounded-md rounded-b-none" // Yüksekliği ve genişliği eşitliyoruz
-        />
+    <Link
+      to={link}
+      className="relative block w-full h-full aspect-auto md:aspect-[5/2] overflow-hidden group font-montserrat"
+    >
+      <img
+        src={img}
+        alt={title}
+        className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+      />
+      <div className="absolute bottom-2 left-2 text-white px-4 py-2 rounded-md font-bold text-base md:text-lg flex items-center gap-2 group-hover:gap-3 transition-all duration-300">
+        {title}
+        <span className="relative flex justify-center items-center w-5 h-5 group-hover:translate-x-1 transition-all duration-300">
+          <span className="absolute w-3 h-3 border-t-2 border-r-2 border-white rotate-45 group-hover:rotate-90 transition-all duration-300"></span>
+        </span>
       </div>
-      <div className="flex flex-col font-montserrat gap-4 h-full px-4 py-4 border-2 border-primary border-t-0 rounded-md rounded-t-none">
-        <h1 className="text-xl font-semibold">{title}</h1>
-        <p className="text-lg">{desc}</p>
-        <Button text="Şimdi Başlayın"/>
-      </div>
-    </div>
+    </Link>
   );
 }
