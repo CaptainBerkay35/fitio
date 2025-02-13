@@ -1,11 +1,14 @@
 import React from "react";
 import Card from "./Card.tsx";
+import antreman from "../img/antremanProgramı.webp";
+import beslenme from "../img/beslenmePlanı.webp";
+import yol from "../img/yolHaritası.webp";
 
 export default function Services() {
   return (
     <div className="flex flex-col items-center gap-8">
       <div>
-        <p className="text-black text-lg font-roboto">
+        <p className="text-black text-lg font-roboto text-center">
           <span className="text-primary font-bold">
             Hedeflerine en hızlı şekilde ulaşmak
           </span>{" "}
@@ -21,20 +24,18 @@ export default function Services() {
         <h1 className="text-black text-4xl font-montserrat font-semibold">
           Ürün ve Hizmetler
         </h1>
-        <div className="flex justify-between gap-12">
-          <div className="flex flex-1">
-            <Card
-              title="Beslenme Planı"
-              desc="Kişiye özel beslenme planı ile hedeflerine daha hızlı ulaş."
-              img="/food.jpg" // Burada gerçek resim URL'sini kullanın
-            />
+
+        <div className="grid grid-cols-2  gap-2 md:gap-8">
+          <div className="row-span-2 ">
+            <Card title="Beslenme Planı" img={beslenme} link="/nutrition" />
           </div>
-          <div className="flex flex-1">
-            <Card
-              title="Antrenman Rehberi"
-              desc="Hedefe yönelik kişisel antrenman programı ile hızlıca gelişimi hisset."
-              img="workoutPlan.jpg" // Burada gerçek resim URL'sini kullanın
-            />
+
+          <div className="h-full">
+            <Card title="Antrenman Rehberi" img={antreman} link="/workout" />
+          </div>
+
+          <div className="h-full">
+            <Card title="Spor Yol Haritası" img={yol} link="/roadmap" />
           </div>
         </div>
       </div>

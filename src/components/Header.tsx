@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
           <Link to="/about" className="hover:text-primary">
-            Rehberler
+            Hizmetler
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
 
