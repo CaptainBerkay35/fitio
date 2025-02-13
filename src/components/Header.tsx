@@ -49,7 +49,7 @@ export default function Header() {
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
           <Link to="/about" className="hover:text-primary">
-            Hakkımızda
+            Rehberler
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
 
@@ -103,7 +103,7 @@ export default function Header() {
             className="text-xl text-primary hover:text-secondary"
             onClick={toggleMenu}
           >
-            Hakkımızda
+            Rehberler
           </Link>
           <Link
             to="/contact"
