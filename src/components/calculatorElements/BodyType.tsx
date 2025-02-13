@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BodyTypeQuiz = () => {
   const questions = [
@@ -131,8 +132,12 @@ const BodyTypeQuiz = () => {
               </div>
             </div>
             <p className="text-gray-500">
-                Vücut tipleri hakkında detaylı bilgi edinmek için tıklayınız.
-              </p>
+              Vücut tipleri hakkında detaylı bilgi edinmek için{" "}
+              <Link to="/body-type" className="text-primary underline font-semibold">
+                tıklayınız
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </div>
