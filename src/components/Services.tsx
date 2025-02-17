@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "./Card.tsx";
-import antreman from "../img/antremanProgramı.webp";
-import beslenme from "../img/beslenmePlanı.webp";
-import yol from "../img/yolHaritası.webp";
+import antreman from "../img/workoutPlan4.PNG";
+import beslenme from "../img/nutritionPlan2.webp";
+import yol from "../img/roadmap2.webp";
 
 export default function Services() {
   return (
