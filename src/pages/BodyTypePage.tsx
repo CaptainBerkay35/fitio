@@ -14,13 +14,11 @@ export default function BodyTypePage() {
         </p>
       </div>
 
-      {/* Görsel Alanı */}
       <div className="flex justify-center mt-8">
         <img src={bodyTypesImage} alt="Vücut Tipleri" className="w-full max-w-2xl rounded-lg shadow-md" />
       </div>
 
-      {/* Ektomorf */}
-      <section id="ektomorf" className="mt-12">
+      <section className="mt-12">
         <h2 className="text-3xl font-semibold text-primary">Ektomorf</h2>
         <p className="mt-4 text-gray-700">
           Ektomorf vücut tipi genellikle uzun, ince ve düşük yağ oranına sahiptir. Kas kütlesi kazanmakta 
@@ -34,8 +32,7 @@ export default function BodyTypePage() {
         </ul>
       </section>
 
-      {/* Mezomorf */}
-      <section id="mezomorf" className="mt-12">
+      <section  className="mt-12">
         <h2 className="text-3xl font-semibold text-primary">Mezomorf</h2>
         <p className="mt-4 text-gray-700">
           Mezomorf vücut tipi kaslı, atletik ve güçlü bir yapıya sahiptir. Kas kazanımı ve yağ yakımı dengelidir. 
@@ -49,8 +46,7 @@ export default function BodyTypePage() {
         </ul>
       </section>
 
-      {/* Endomorf */}
-      <section id="endomorf" className="mt-12">
+      <section  className="mt-12">
         <h2 className="text-3xl font-semibold text-primary">Endomorf</h2>
         <p className="mt-4 text-gray-700">
           Endomorf vücut tipi geniş, güçlü ve kolay yağ depolayan bir yapıya sahiptir. Metabolizmaları daha yavaş çalışır 
@@ -64,7 +60,6 @@ export default function BodyTypePage() {
         </ul>
       </section>
 
-      {/* Sayfanın en üstüne dönmek için buton */}
       <div className="mt-12 text-center">
         <a href="#" className="text-primary underline">Başa Dön</a>
       </div>
