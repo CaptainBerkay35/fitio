@@ -11,7 +11,7 @@ export default function Card({ title, img, link }: CardProps) {
   return (
     <Link
       to={link}
-      className="relative block w-full h-full aspect-auto md:aspect-[5/2] overflow-hidden group font-montserrat"
+      className="relative block w-full h-full aspect-auto md:aspect-[5/3] overflow-hidden group font-montserrat"
     >
       <img
         src={img}

@@ -6,6 +6,10 @@ import NutritionPage from "./pages/NutritionPage.tsx";
 import RoadmapPage from "./pages/RoadmapPage.tsx";
 import WorkoutPlanPage from "./pages/WorkoutPlanPage.tsx";
 import ScrollToTop from "../src/components/ScrollToTop.tsx";
+import WorkoutPage from "./pages/WorkoutPage.tsx";
+import WorkoutDetailPage from "./pages/workoutPages/WorkoutDetailPage.tsx";
+
+
 
 
 
@@ -18,8 +22,9 @@ export default function App() {
         <Route path="/body-type" element={<BodyTypePage />} />
         <Route path="/nutrition" element={<NutritionPage />} />
         <Route path="/roadmap" element={<RoadmapPage />} />
-        <Route path="/workout" element={<WorkoutPlanPage />} />
-
+        <Route path="/workoutPlan" element={<WorkoutPlanPage />} />
+        <Route path="/workout" element={<WorkoutPage />} />
+        <Route path="/workout/:program" element={<WorkoutDetailPage />} />
 
 
       </Routes>
