@@ -31,7 +31,7 @@ export default function Services() {
           </div>
 
           <div className="h-full">
-            <Card title="Antrenman Rehberi" img={antreman} link="/workout" />
+            <Card title="Antrenman Rehberi" img={antreman} link="/workoutPlan" />
           </div>
 
           <div className="h-full">

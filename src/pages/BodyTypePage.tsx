@@ -5,7 +5,7 @@ import bodyTypesImage from "../img/bodyType.webp"; // Görsel dosyanı buraya ek
 export default function BodyTypePage() {
   return (
     <Layout>
-      <div className="max-w-3xl text-center">
+      <div className="text-center">
         <h1 className="text-4xl font-bold text-primary">Vücut Tipleri</h1>
         <p className="mt-4 text-gray-700">
           İnsan vücutları genetik yapıya bağlı olarak üç ana kategoriye ayrılır: ektomorf, mezomorf ve endomorf.
