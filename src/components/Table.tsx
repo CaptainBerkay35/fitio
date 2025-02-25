@@ -44,7 +44,7 @@ export default function Table({
                     {item.day}
                   </td>
                   <td className="border border-gray-300 p-1 md:p-2">
-                    <div className={`grid grid-cols-${columns} gap-2`}>
+                    <div className={`grid grid-cols-6 gap-2`}>
                       {item.exercises.map((exercise, idx) => (
                         <div
                           key={idx}
