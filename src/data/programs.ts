@@ -1,12 +1,12 @@
-import evdeSpor from "../img/workoutPlan4.PNG";
-import yagYakma from "../img/workoutPlan4.PNG";
-import fullBody from "../img/workoutPlan4.PNG";
-import split from "../img/workoutPlan4.PNG";
+import WorkoutatHome from "../img/workoutImg/homeWorkout.jpg";
+import cardio from "../img/workoutImg/cardio.jpg";
+import fullBody from "../img/workoutImg/fullBodyWorkout.jpg";
+import split from "../img/workoutImg/splitWorkout.jpg";
 
 export const programs = [
   {
     title: "Evde Spor",
-    img: evdeSpor,
+    img: WorkoutatHome,
     description:
       "Evde yapılacak egzersizlerle kas dayanıklılığını artırabilir ve vücut yağını azaltabilirsiniz. Ekipman gerektirmeyen bu program, vücut ağırlığıyla yapılan temel hareketlerden oluşur. Ancak dumbbell ve direnç bandı kullanarak daha verimli bir antrenman yapılabilir.",
     weeklyProgram: [
@@ -65,7 +65,7 @@ export const programs = [
 
   {
     title: "Kardiyo",
-    img: yagYakma,
+    img: cardio,
     description:
       "Yağ yakımını hızlandırmaya yönelik yoğun kardiyo ve kuvvet antrenmanlarını içeren bu program, yağ kaybını destekler ve metabolizmayı hızlandırır.",
     weeklyProgram: [

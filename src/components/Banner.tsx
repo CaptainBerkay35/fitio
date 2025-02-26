@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button.tsx";
+import bannerImg from "../img/bannerImg.png";
 
 export default function Banner() {
 
@@ -17,13 +18,14 @@ export default function Banner() {
         <Button
           text="Şimdi Başlayın"
           className="shadow-lg shadow-primary hover:shadow-none"
+          to="/workout"
         />
       </div>
 
       {/* Sağ Taraf: Resim Alanı */}
       <div className="flex-1 relative">
         <img
-          src="bannerImg.png"
+          src={bannerImg}
           alt="Fitness Banner"
           className="w-full max-w-md mx-auto md:mx-0 rounded-lg"
         />
