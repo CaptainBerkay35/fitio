@@ -1,5 +1,3 @@
-// WorkoutDetailPage.tsx
-
 import React from "react";
 import { useParams } from "react-router-dom";
 import { programs } from "../../data/programs.ts";
@@ -22,30 +20,29 @@ export default function WorkoutDetailPage() {
   const weeklyProgram = selectedProgram.weeklyProgram || [];
 
   const handleDownloadExcel = () => {
-    const headers = [
-      "Gün",
-      ...Array.from({ length: 6 }, (_, i) => `Egzersiz ${i + 1}`),
-    ];
+  const headers = [
+    "Gün", 
+    ...Array.from({ length: 6 }, (_, i) => `Egzersiz ${i + 1}`),
+  ];
 
-    const wsData = [
-      headers,
-      ...weeklyProgram.map((day) => [
-        day.day,
-        ...day.exercises,
-        ...Array(6 - day.exercises.length).fill(""),
-      ]),
-    ];
+  const wsData = [
+    headers,
+    ...weeklyProgram.map((day) => [
+      day.day,
+      ...day.exercises.map((exercise) => `${exercise.name} (${exercise.setreps})`),  // Egzersiz ismi ve set/reps bilgisi
+      ...Array(6 - day.exercises.length).fill(""), // Eksik hücreleri doldur
+    ]),
+  ];
 
-    const ws = XLSX.utils.aoa_to_sheet(wsData);
+  const ws = XLSX.utils.aoa_to_sheet(wsData);
 
-    ws["!cols"] = [{ wch: 35 }, ...Array(6).fill({ wch: 25 })];
-    ws["!rows"] = Array(wsData.length).fill({ hpt: 25 });
+  ws["!cols"] = [{ wch: 35 }, ...Array(6).fill({ wch: 25 })];
+  ws["!rows"] = Array(wsData.length).fill({ hpt: 25 });
 
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, selectedProgram.title);
-    XLSX.writeFile(wb, `${selectedProgram.title}.xlsx`);
-  };
-
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, selectedProgram.title);
+  XLSX.writeFile(wb, `${selectedProgram.title}.xlsx`);
+};
   return (
     <Layout>
       <div className="text-center">
