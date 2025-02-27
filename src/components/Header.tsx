@@ -43,26 +43,21 @@ export default function Header() {
         </Link>
 
         {/* Masaüstü Menü */}
-        <nav className="hidden md:flex space-x-6 font-montserrat text-text text-lg ">
+        <nav className="hidden md:flex space-x-6 font-montserrat text-text text-lg font-medium">
           <Link to="/" className="hover:text-primary">
             Anasayfa
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
           <Link to="/about" className="hover:text-primary">
-            Hizmetler
-          </Link>
-          <div className="bg-gray-500 w-0.5 min-h-full "></div>
-
-          <Link to="/contact" className="hover:text-primary ">
-            İletişim
+            Hesaplayıcılar
           </Link>
         </nav>
 
         {/* Buton */}
         <div className="hidden md:block">
           <Button
-            text="Giriş Yap"
-            to="/login"
+            text="Spora Başla"
+            to="/workout"
             className="bg-primary text-primary font-montserrat"
           />
         </div>
@@ -84,40 +79,33 @@ export default function Header() {
         {/* Sağ Üstteki Kapatma Butonu */}
         {menuOpen && (
           <div className="absolute top-4 right-4">
-            <button onClick={toggleMenu} className="text-3xl text-primary">
+            <button onClick={toggleMenu} className="text-3xl text-white">
               <FiX />
             </button>
           </div>
         )}
 
-        <nav className="flex flex-col items-center justify-center h-full space-y-6">
+        <nav className="flex flex-col items-center justify-center h-full space-y-2 bg-primary font-montserrat p-8">
           <Link
             to="/"
-            className="text-xl text-primary hover:text-secondary"
+            className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
             onClick={toggleMenu}
           >
             Anasayfa
           </Link>
           <Link
             to="/about"
-            className="text-xl text-primary hover:text-secondary"
+            className="text-xl font-semibold text-white border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
             onClick={toggleMenu}
           >
-            Rehberler
+            Hesaplayıcılar
           </Link>
           <Link
-            to="/contact"
-            className="text-xl text-primary hover:text-secondary"
+            to="/workout"
+            className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
             onClick={toggleMenu}
           >
-            İletişim
-          </Link>
-          <Link
-            to="/login"
-            className=" text-primary text-xl   "
-            onClick={toggleMenu}
-          >
-            Giriş Yap
+            Spora Başla
           </Link>
         </nav>
       </div>
