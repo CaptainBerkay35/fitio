@@ -1,9 +1,7 @@
 import React from "react";
 import Button from "./Button.tsx";
-import bannerImg from "../img/bannerImg.png";
 
 export default function Banner() {
-
   return (
     <div className="flex flex-col md:flex-row items-center justify-between">
       {/* Sol Taraf: Metin Alanı */}
@@ -25,11 +23,10 @@ export default function Banner() {
       {/* Sağ Taraf: Resim Alanı */}
       <div className="flex-1 relative">
         <img
-          src={bannerImg}
+          src="/images/bannerImg.png"
           alt="Fitness Banner"
           className="w-full max-w-md mx-auto md:mx-0 rounded-lg"
         />
-
       </div>
     </div>
   );
