@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout.tsx";
+import WorkoutQuiz from "../components/WorkoutQuiz.tsx";
 import fullbodyVsSplit from "../img/fullBodyvsSplit.jpg"; // Kilo alma görseli
 
 export default function RoadmapPage() {
@@ -17,7 +18,7 @@ export default function RoadmapPage() {
       </div>
 
       {/* Kilo Alma (Bulk Dönemi) */}
-      <section >
+      <section>
         <h2 className="text-3xl font-semibold text-primary">
           Kilo Alma (Bulk Dönemi)
         </h2>
@@ -58,7 +59,7 @@ export default function RoadmapPage() {
       </section>
 
       {/* Yağ Yakımı (Cut Dönemi) */}
-      <section >
+      <section>
         <h2 className="text-3xl font-semibold text-primary">
           Yağ Yakımı (Cut Dönemi)
         </h2>
@@ -88,7 +89,7 @@ export default function RoadmapPage() {
       </section>
 
       {/* Full Body vs Split Antrenman */}
-      <section >
+      <section>
         <div className="flex flex-col gap-4 mb-8">
           <h2 className="text-3xl font-semibold text-primary">
             Full Body vs Split Antrenman
@@ -145,8 +146,72 @@ export default function RoadmapPage() {
           </div>
         </div>
       </section>
+      {/* Hangi Program Sana Uygun? */}
+      <section>
+        <h2 className="text-3xl font-semibold text-primary text-center">
+          Hangi Program Sana Uygun?
+        </h2>
+        <p className="mt-4 text-gray-700">
+          Hedefin, antrenman geçmişin ve haftalık ayırabileceğin zamana göre
+          uygulaman gereken program farklılık gösterir. İşte bilimsel verilere
+          dayanarak hangi programın senin için daha uygun olabileceğini
+          belirleyen bazı kriterler:
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Full Body Uygunluğu */}
+          <div className="p-6 border rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-primary">
+              Full Body Antrenman Kimler İçin Uygun?
+            </h3>
+            <ul className="mt-2 text-gray-700 list-disc list-inside">
+              <li>Yeni başlayan bireyler (0-6 ay spor geçmişi).</li>
+              <li>Haftada 2-3 gün antrenman yapabilenler.</li>
+              <li>
+                Temel hareketleri öğrenmek isteyenler (squat, deadlift, bench
+                press).
+              </li>
+              <li>
+                American College of Sports Medicine'a (ACSM) göre, yeni
+                başlayanlar için haftada 3 tam vücut antrenmanı, optimal kas
+                gelişimini destekler.
+              </li>
+            </ul>
+          </div>
+
+          {/* Split Uygunluğu */}
+          <div className="p-6 border rounded-lg shadow-md">
+            <h3 className="text-2xl font-semibold text-primary">
+              Split Antrenman Kimler İçin Uygun?
+            </h3>
+            <ul className="mt-2 text-gray-700 list-disc list-inside">
+              <li>Orta ve ileri düzey sporcular (6+ ay spor geçmişi).</li>
+              <li>Haftada 4 veya daha fazla gün spor yapabilenler.</li>
+              <li>
+                Her bir kas grubuna daha fazla odaklanmak ve hacim artırmak
+                isteyenler.
+              </li>
+              <li>
+                2016'da Schoenfeld ve arkadaşlarının yaptığı araştırmaya göre,
+                yüksek hacimli (volume) split programları ileri düzey bireylerde
+                daha fazla kas hipertrofisi sağlar.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p className="mt-8 text-gray-700">
+          Hemen aşağıda bulunan basit test ile sana uygun antreman program
+          tarzını bulabilirsin.
+        </p>
+      </section>
+
+      <WorkoutQuiz />
+
       <div className="mt-12 text-center">
-        <a href="#" className="text-primary underline">Başa Dön</a>
+        <a href="#" className="text-primary underline">
+          Başa Dön
+        </a>
       </div>
     </Layout>
   );
