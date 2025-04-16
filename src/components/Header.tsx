@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi"; // Menü ikonları için
 import Button from "./Button.tsx";
 
-export default function Header() {
+export default function Header({ scrollToCalculator }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+  const handleCalculatorClick = () => {
+    navigate("/#calculator");
+    setMenuOpen(false); // Mobil menü kapanması için (isteğe bağlı)
   };
 
   useEffect(() => {
@@ -48,9 +53,12 @@ export default function Header() {
             Anasayfa
           </Link>
           <div className="bg-gray-500 w-0.5 min-h-full "></div>
-          <Link to="/about" className="hover:text-primary">
+          <button
+            onClick={handleCalculatorClick}
+            className="hover:text-primary transition"
+          >
             Hesaplayıcılar
-          </Link>
+          </button>
         </nav>
 
         {/* Buton */}
@@ -93,13 +101,12 @@ export default function Header() {
           >
             Anasayfa
           </Link>
-          <Link
-            to="/about"
-            className="text-xl font-semibold text-white border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
-            onClick={toggleMenu}
+          <button
+            onClick={handleCalculatorClick}
+            className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
           >
             Hesaplayıcılar
-          </Link>
+          </button>
           <Link
             to="/workout"
             className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"

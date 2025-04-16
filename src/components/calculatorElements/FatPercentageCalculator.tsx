@@ -18,17 +18,17 @@ export default function FatPercentageCalculator() {
       // Erkeklerde yağ oranı hesaplama formülü
       bodyFatPercentage =
         495 /
-          (1.0324 - 
+          (1.0324 -
             0.19077 * Math.log10(waist - neck) +
-            0.15456 * Math.log10(height)) - 
+            0.15456 * Math.log10(height)) -
         450;
     } else if (gender === "female") {
       // Kadınlarda yağ oranı hesaplama formülü
       bodyFatPercentage =
-        495 / 
-          (1.29579 - 
-            0.35004 * Math.log10(waist + hip - neck) + 
-            0.221 * Math.log10(height)) - 
+        495 /
+          (1.29579 -
+            0.35004 * Math.log10(waist + hip - neck) +
+            0.221 * Math.log10(height)) -
         450;
     }
 
@@ -59,7 +59,9 @@ export default function FatPercentageCalculator() {
         <button
           onClick={() => setGender("male")}
           className={`ml-2 px-4 py-2 rounded-md flex flex-col items-center justify-center border border-primary ${
-            gender === "male" ? "bg-primary text-white" : "bg-white text-primary"
+            gender === "male"
+              ? "bg-primary text-white"
+              : "bg-white text-primary"
           }`}
         >
           <FaMale size={32} color={gender === "male" ? "white" : "#00d172"} />
@@ -68,15 +70,20 @@ export default function FatPercentageCalculator() {
         <button
           onClick={() => setGender("female")}
           className={`ml-2 px-4 py-2 rounded-md flex flex-col items-center justify-center border border-primary ${
-            gender === "female" ? "bg-primary text-white" : "bg-white text-primary"
+            gender === "female"
+              ? "bg-primary text-white"
+              : "bg-white text-primary"
           }`}
         >
-          <FaFemale size={32} color={gender === "female" ? "white" : "#00d172"} />
+          <FaFemale
+            size={32}
+            color={gender === "female" ? "white" : "#00d172"}
+          />
           Kadın
         </button>
       </div>
 
-      <div className="flex flex-col md:flex md:flex-row  gap-8">
+      <div className="flex flex-col md:flex md:flex-row  gap-8 mb-4 md:mb-0">
         <div className="flex  flex-col flex-1 gap-4 h-full mb-4 md:mb-0">
           {/* SliderInput Component'lerini Burada Kullanıyoruz */}
           <SliderInput
@@ -141,7 +148,7 @@ export default function FatPercentageCalculator() {
           {/* Sonuç */}
           <div className="px-4 py-2 md:px-8 md:py-4 bg-gray-100 rounded-lg flex-grow">
             <h1 className="mb-4 md:mb-8 font-bold text-2xl">Karne</h1>
-            <div className="mb-2">
+            <div className="mb-4">
               <p className="font-semibold text-xl">Vücut Yağ Oranı</p>
               <p className="font-bold text-2xl">{bodyFatPercentage}%</p>
             </div>
