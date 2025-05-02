@@ -59,6 +59,10 @@ export default function Header({ scrollToCalculator }) {
           >
             Hesaplayıcılar
           </button>
+          <div className="bg-gray-500 w-0.5 min-h-full "></div>
+          <Link to="/foodList" className="hover:text-primary transition">
+            Tarif Kitabı
+          </Link>
         </nav>
 
         {/* Buton */}
@@ -107,6 +111,12 @@ export default function Header({ scrollToCalculator }) {
           >
             Hesaplayıcılar
           </button>
+          <Link
+            to="/foodList"
+            className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"
+          >
+            Tarif Kitabı
+          </Link>
           <Link
             to="/workout"
             className="text-xl font-semibold text-white  border-white border-2 rounded w-full text-center p-4 hover:bg-white hover:text-primary transition"

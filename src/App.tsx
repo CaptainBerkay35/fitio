@@ -8,6 +8,7 @@ import WorkoutPlanPage from "./pages/WorkoutPlanPage.tsx";
 import ScrollToTop from "../src/components/ScrollToTop.tsx";
 import WorkoutPage from "./pages/WorkoutPage.tsx";
 import WorkoutDetailPage from "./pages/workoutPages/WorkoutDetailPage.tsx";
+import FoodListPage from "./pages/FoodListPage.tsx";
 
 
 
@@ -25,6 +26,8 @@ export default function App() {
         <Route path="/workoutPlan" element={<WorkoutPlanPage />} />
         <Route path="/workout" element={<WorkoutPage />} />
         <Route path="/workout/:program" element={<WorkoutDetailPage />} />
+        <Route path="/foodList" element={<FoodListPage />} />
+
 
 
       </Routes>
