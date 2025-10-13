@@ -1,46 +1,141 @@
-# Getting Started with Create React App
+# 🏋️ Fitio - Sağlıklı Yaşam ve Fitness Platformu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Fitio, kullanıcılara kişiselleştirilmiş antrenman programları, beslenme tavsiyeleri ve fitness rehberleri sunan kapsamlı bir web uygulamasıdır.
 
-## Available Scripts
+## 🌐 Canlı Demo
 
-In the project directory, you can run:
+🔗 [https://fitio-nu.vercel.app/](https://fitio-nu.vercel.app/)
 
-### `npm start`
+## ✨ Özellikler
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🏃 Antrenman Programları
+- **Full Body Antrenman**: Tüm vücudu çalıştıran kapsamlı program
+- **Split Antrenman**: Bölgesel kas gruplarını hedefleyen detaylı program
+- Video destekli egzersiz gösterimleri
+- Set ve tekrar sayısı rehberi
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 🥗 Beslenme Rehberi
+- Makro besin öğeleri (protein, karbonhidrat, yağ) hakkında detaylı bilgiler
+- Spor öncesi ve sonrası beslenme önerileri
+- İndirilebilir fit tarifler kitabı (PDF)
 
-### `npm test`
+### 📊 Kişiselleştirilmiş Yol Haritası
+- İnteraktif anket sistemi
+- Kullanıcı hedeflerine göre özelleştirilmiş öneriler
+- Fitness seviyesi tespiti
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📚 Eğitim Kaynakları
+- Egzersiz teknikleri ve ipuçları
+- Bilimsel araştırma referansları
+- Detaylı rehber sayfaları
 
-### `npm run build`
+## 🛠️ Teknolojiler
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React 19.0.0** - UI geliştirme
+- **TypeScript** - Tip güvenli kod
+- **React Router DOM** - Sayfa yönlendirme
+- **Framer Motion** - Animasyonlar
+- **Tailwind CSS** - Stil yönetimi
+- **React Icons** - İkon kütüphanesi
+- **XLSX** - Excel dosya işleme
+- **tsParticles** - Parçacık efektleri
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Kurulum
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Depoyu klonlayın
+git clone https://github.com/kullaniciadi/fitio.git
 
-### `npm run eject`
+# Proje dizinine gidin
+cd fitio
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Bağımlılıkları yükleyin
+npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Geliştirme sunucusunu başlatın
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Uygulama [http://localhost:3000](http://localhost:3000) adresinde açılacaktır.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🚀 Deployment
 
-## Learn More
+Proje Vercel üzerinde yayınlanmıştır ve her commit otomatik olarak deploy edilir.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Production build oluşturma
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📱 Özellikler ve Sayfalar
+
+### Ana Sayfa (/)
+- Hero bölümü ile karşılama
+- Özellik kartları
+- Hızlı başlangıç rehberi
+
+### Antrenman Programları (/workout)
+- Full Body ve Split program seçenekleri
+- Detaylı haftalık programlar
+- Video destekli egzersiz rehberi
+
+### Beslenme (/food-list)
+- Makro besin öğeleri bilgileri
+- Öğün önerileri
+- İndirilebilir tarifler
+
+### Yol Haritası (/roadmap)
+- Fitness seviyesi belirleme anketi
+- Kişiselleştirilmiş program önerileri
+- İlerleyiş takibi
+
+## 🎨 Tasarım
+
+- Responsive tasarım (mobil, tablet, masaüstü)
+- Modern ve temiz arayüz
+- Yeşil (#10b981) ana renk teması
+- Montserrat ve Roboto font ailesi
+
+## 📄 Proje Yapısı
+
+```
+fitio/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── Fitio-Yemek tarifleri.pdf
+├── src/
+│   ├── components/
+│   │   ├── Layout.tsx
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Card.tsx
+│   │   ├── Table.tsx
+│   │   └── VideoModal.tsx
+│   ├── pages/
+│   │   ├── HomePage.tsx
+│   │   ├── WorkoutPage.tsx
+│   │   ├── WorkoutPlanPage.tsx
+│   │   ├── FoodListPage.tsx
+│   │   └── RoadmapPage.tsx
+│   ├── data/
+│   │   └── programs.ts
+│   ├── App.tsx
+│   └── index.tsx
+├── package.json
+└── README.md
+```
+
+## 🤝 Katkıda Bulunma
+
+1. Bu depoyu fork edin
+2. Feature branch oluşturun (`git checkout -b feature/yeniOzellik`)
+3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik eklendi'`)
+4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
+5. Pull Request oluşturun
+
+## 📝 Lisans
+
+Bu proje MIT lisansı altında lisanslanmıştır.
+
+
